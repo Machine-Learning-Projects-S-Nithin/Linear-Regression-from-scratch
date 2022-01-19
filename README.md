@@ -1,2 +1,25 @@
 # Linear-Regression-from-scratch
-Linear Regression build from scratch using numpy and pandas visualized using matplotlib
+A simple Linear Regression class build from scratch using numpy and visualized using matplotlib
+
+## Initializations
+* ### learning_rate:
+  * determines the step size at each iteration while moving toward a minimum of the cost function. A high value for this can cause overshooting, causing the model to be inaccurate and a low value could result in smaller steps towards local-minima, meaning slow convergence and requiring more iterations.
+  * Default value: `0.007`
+* ### iterations:
+  * the number of steps towards the local-minima. A high value for this simply increases the complexity of this model and a low value doesn't take us close to the local-minima.
+  * Default value: `100000`
+
+## Parameters
+Parameters of this model include
+* x and y :
+  * x is the multivariable input training dataset and y is the target variable for that dataset
+* Verbose :
+  * Verbose is a flag variable that can be set to  `True` to display the cost after every 1/4th of the total iteration
+
+## Working of the model
+* The input variable is taken as matrix of `m` rows and `n` columns and the target variable is taken as a vector of `m` rows.  
+* Initial value of weights is taken as a vector of zeros of size `n`.
+* Hypothesis is a candidate model that approximates a target function for mapping inputs to outputs.
+* Initial hypothesis is calulated by performing matrix multiplication of input variable and the initial weights and is represented by `y_hat` .
+*  J(θ1)=12m∑i=1m(hθ(x(i))−y(i))2
+
