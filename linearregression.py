@@ -17,7 +17,7 @@ class LinearReg:
         w-=(alpha/m)*(np.transpose(x) @ (y_hat-y))
         return w
     def fit_model(self,x,y,verbose):
-        weights=self.init_weights(x)
+        self.weights=self.init_weights(x)
         costs=[]
         for itertaion in range(self.iterations):
             weights=self.gradient_descent(x,y,weights,self.hypothesis(x,weights), self.learning_rate)
@@ -30,7 +30,7 @@ class LinearReg:
             if itertaion==int(3*self.iterations/4) and verbose:
                 print(f"Cost after {itertaion}/{self.iterations} iterations is : {J}")
         print(f"Cost after {self.iterations}/{self.iterations} iterations is : {J}")
-        return weights,J,costs
-    def predict(self,final_weights,x_test):
-        y_pred=x_test @ final_weights
+        return self.weights,J,costs
+    def predict(self,x_test):
+        y_pred=x_test @ self.weights
         return y_pred
