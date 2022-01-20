@@ -20,6 +20,9 @@ Parameters of this model include
 * The input variable is taken as matrix of `m` rows and `n` columns and the target variable is taken as a vector of `m` rows.  
 * Initial value of weights is taken as a vector of zeros of size `n`.
 * Hypothesis is a candidate model that approximates a target function for mapping inputs to outputs.
-* Initial hypothesis is calulated by performing matrix multiplication of input variable and the initial weights and is represented by `y_hat` .
-*  J(θ1)=12m∑i=1m(hθ(x(i))−y(i))2
+* Initial hypothesis is calulated by performing matrix multiplication of input variable and the initial weights as shown below.
 
+  ![eqn2](https://user-images.githubusercontent.com/84195790/150275908-86a94b9a-88f7-48fe-99c7-0074c7712faa.gif)
+  
+* The cost of this hypothesis is calculated using the mean squared error as shwon below:
+  
