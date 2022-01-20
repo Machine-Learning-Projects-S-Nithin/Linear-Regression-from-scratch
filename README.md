@@ -12,7 +12,8 @@ A simple Linear Regression class build from scratch using numpy and visualized u
 ## Parameters
 Parameters of this model include
 * x and y :
-  * x is the multivariable input training dataset and y is the target variable for that dataset
+  * x is the multivariable input training dataset and y is the target variable of that dataset.
+
 * Verbose :
   * Verbose is a flag variable that can be set to  `True` to display the cost after every 1/4th of the total iteration
 
@@ -44,4 +45,30 @@ Parameters of this model include
 * We know that the partial derivative of the cost function with respect to weights results in gradient equation. This gradient equation gives us the slope at a point `J(w)` on the cost vs weight graph.
 * The descent of cost on the cost vs weights graph looks as shown in the image below:
 
+  ![Graph_Plotter2](https://user-images.githubusercontent.com/84195790/150286908-0f40b29e-ce89-468b-8d66-636095b9c984.png)
+  
+* If the learning rate is too small, gradient descent can be slow.
+* If the learning rate is too large, gradient descent can overshoot the minimum. It may fail to converge, or even diverge.
 
+  ![gradient-descent-divergence](https://user-images.githubusercontent.com/84195790/150288077-fb3dc67a-6f63-4446-97e8-723fab8efc77.gif)
+* Gradient descent can converge to a local minima, even with the learning rate is fixed.
+* As we approach a local minimum, gradient descent will automatically take smaller steps as the slope (gradient) decreases
+* Each step of gradient descent uses all the training examples.
+* The animation below gives the virtual representation of how the gradient descent works.
+
+  ![68747470733a2f2f707669676965722e6769746875622e696f2f6d656469612f696d672f70617274312f6772616469656e745f64657363656e742e676966](https://user-images.githubusercontent.com/84195790/150288315-84a091fd-46d8-4211-8777-b23653ba9d17.gif)
+  
+## Usage
+
+```py
+from linearregression import LinearReg
+import numpy as np
+
+X2=np.random.rand(500,1)
+Y2=(3*X2)+(np.random.rand(500,1)*0.1)
+model=LinearReg()
+weights,J,costs=model1.fit_model(X2,Y2, True)
+
+print("Final cost: ", J)
+print("Weights: ",weights)
+```
