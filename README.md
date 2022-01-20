@@ -71,4 +71,6 @@ weights,J,costs=model1.fit_model(X2,Y2, True)
 
 print("Final cost: ", J)
 print("Weights: ",weights)
+
+y_pred=model.predict(X2)
 ```
