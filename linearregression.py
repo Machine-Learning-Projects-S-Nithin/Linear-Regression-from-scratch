@@ -31,3 +31,6 @@ class LinearReg:
                 print(f"Cost after {itertaion}/{self.iterations} iterations is : {J}")
         print(f"Cost after {self.iterations}/{self.iterations} iterations is : {J}")
         return weights,J,costs
+    def predict(self,final_weights,x_test):
+        y_pred=x_test @ final_weights
+        return y_pred
