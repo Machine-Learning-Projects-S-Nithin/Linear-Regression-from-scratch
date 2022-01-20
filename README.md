@@ -26,3 +26,8 @@ Parameters of this model include
   
 * The cost of this hypothesis is calculated using the mean squared error as shwon below:
   
+  ![eqn1](https://user-images.githubusercontent.com/84195790/150277610-5444fec2-6025-4918-9652-af812e6f8673.gif)
+ 
+* In the next step the gradient of this cost function is calculated and multiplied by the learning_rate
+* The initial weight is then replaced by this gradient calculated as shown below and this process is known as gradient descent. More intuition on gradient descent will be given later in this documentation.
+  
