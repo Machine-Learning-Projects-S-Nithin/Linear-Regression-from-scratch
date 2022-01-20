@@ -20,7 +20,7 @@ Parameters of this model include
 * The input variable is taken as matrix of `m` rows and `n` columns and the target variable is taken as a vector of `m` rows.  
 * Initial value of weights is taken as a vector of zeros of size `n`.
 * Hypothesis is a candidate model that approximates a target function for mapping inputs to outputs.
-* Initial hypothesis is calulated by performing matrix multiplication of input variable and the initial weights as shown below.
+* Initial hypothesis is calulated by performing matrix multiplication of input variable and the initial weights as shown below:
 
   ![eqn2](https://user-images.githubusercontent.com/84195790/150275908-86a94b9a-88f7-48fe-99c7-0074c7712faa.gif)
   
@@ -31,3 +31,11 @@ Parameters of this model include
 * In the next step the gradient of this cost function is calculated and multiplied by the learning_rate
 * The initial weight is then replaced by this gradient calculated as shown below and this process is known as gradient descent. More intuition on gradient descent will be given later in this documentation.
   
+  ![eqn3](https://user-images.githubusercontent.com/84195790/150278395-6573a169-c8ad-4581-9976-2c43073712b6.gif)
+
+* The above steps are repeated for the number of iterations that was initialized (in this case `100000`).
+
+## Gradient Descent intuition
+* Gradient descent is an iterative optimization algorithm used for finding a local minima. The idea is to take repeated steps in the opposite direction of the gradient until we reach the local minima of the cost function.
+* The gradient descent algorithm is as shown below:
+
