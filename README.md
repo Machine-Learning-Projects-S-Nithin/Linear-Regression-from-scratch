@@ -39,3 +39,9 @@ Parameters of this model include
 * Gradient descent is an iterative optimization algorithm used for finding a local minima. The idea is to take repeated steps in the opposite direction of the gradient until we reach the local minima of the cost function.
 * The gradient descent algorithm is as shown below:
 
+  ![eqn3](https://user-images.githubusercontent.com/84195790/150280507-50b25eba-425b-4926-93b0-d4d860212a41.gif)
+
+* We know that the partial derivative of the cost function with respect to weights results in gradient equation. This gradient equation gives us the slope at a point `J(w)` on the cost vs weight graph.
+* The descent of cost on the cost vs weights graph looks as shown in the image below:
+
+
